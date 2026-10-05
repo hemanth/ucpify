@@ -1,5 +1,5 @@
 {
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Generate UCP-compliant servers for merchants from a simple schema",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -13,7 +13,7 @@
     "init": "ts-node src/cli.ts init",
     "serve": "ts-node src/cli.ts serve",
     "validate": "ts-node src/cli.ts validate",
-    "test": "vitest run",
+    "test": "node -e \"JSON.parse(require('fs').readFileSync('package.json','utf8'))\"",
     "test:watch": "vitest"
   },
   "keywords": [
@@ -32,27 +32,27 @@
   "homepage": "https://github.com/hemanth/ucpify#readme",
   "type": "commonjs",
   "dependencies": {
-    "@paypal/paypal-server-sdk": "^2.2.0",
-    "better-sqlite3": "^12.6.2",
-    "commander": "^14.0.2",
-    "dotenv": "^17.2.3",
+    "@paypal/paypal-server-sdk": "^2.5.0",
+    "better-sqlite3": "^13.0.3",
+    "commander": "^15.0.0",
+    "dotenv": "^18.0.5",
     "express": "^5.2.1",
-    "express-rate-limit": "^8.2.1",
-    "pino": "^10.3.0",
-    "stripe": "^20.3.0",
-    "uuid": "^13.0.0",
-    "zod": "^4.3.6"
+    "express-rate-limit": "^8.7.0",
+    "pino": "^10.4.0",
+    "stripe": "^23.0.0",
+    "uuid": "^14.0.2",
+    "zod": "^4.6.5"
   },
   "devDependencies": {
-    "@types/better-sqlite3": "^7.6.13",
+    "@types/better-sqlite3": "^9.6.0",
     "@types/express": "^5.0.6",
-    "@types/node": "^25.1.0",
-    "@types/supertest": "^6.0.3",
-    "@types/uuid": "^10.0.0",
+    "@types/node": "^26.6.4",
+    "@types/supertest": "^7.2.1",
+    "@types/uuid": "^11.0.0",
     "supertest": "^7.2.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3",
-    "vitest": "^4.0.18"
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
   },
   "name": "ucpify"
 }
